@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(135deg, #1e1e2f, #282846);
+  font-family: 'Segoe UI', 'Apple Color Emoji', 'Segoe UI Emoji', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ff7eb3, #ff758c, #ff6a95);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+
+canvas {
+  border: 2px solid #fff;
+  margin-top: 10px;
+}
