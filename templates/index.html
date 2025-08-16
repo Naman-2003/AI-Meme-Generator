@@ -3,38 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <title>AI Mood-to-Meme 🎭</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: linear-gradient(135deg, #1e1e2f, #282846);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .hidden { display: none; }
-    .button-container { margin-top: 20px; }
-  </style>
+
+  <!-- Custom CSS -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
-<body class="text-light">
+<body class="bg-dark text-light">
 <div class="container text-center py-5">
   <h1 class="display-4 fw-bold">AI Mood-to-Meme 🎭</h1>
   <p class="lead">Capture → Detect Mood → Generate Meme</p>
 
+  <!-- Webcam + Capture -->
   <div class="card p-4 mt-4">
     <video id="webcam" autoplay playsinline width="320" height="240" class="rounded border"></video><br>
     <button id="capture" class="btn btn-primary mt-3">📸 Capture</button>
     <canvas id="canvas" width="320" height="240" class="d-none"></canvas>
   </div>
 
-  <div class="button-container">
+  <!-- Generate Meme -->
+  <div class="mt-4">
     <button id="generateBtn" class="btn btn-success">✨ Generate Meme</button>
   </div>
 
+  <!-- Meme Area -->
   <div id="memeArea" class="mt-4"></div>
-  <button id="downloadBtn" class="btn btn-outline-light hidden mt-3">⬇️ Download Meme</button>
-  <button id="saveBtn" class="btn btn-warning hidden mt-3">💾 Save Meme</button>
+  <button id="downloadBtn" class="btn btn-outline-light d-none mt-3">⬇️ Download Meme</button>
+  <button id="saveBtn" class="btn btn-warning d-none mt-3">💾 Save Meme</button>
 </div>
 
-<script src="/static/js/app.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
